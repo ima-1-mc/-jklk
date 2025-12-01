@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2025
 ** exec
 ** File description:
-** exec                                                                                                                               
+** exec
 */
 
 #include "../include/my.h"
