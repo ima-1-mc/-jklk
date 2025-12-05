@@ -1,7 +1,4 @@
 ./Makefile:29: MINOR:C-G8
-./include/my.h~:1: MAJOR:C-O1
 ./my_sudo:1: MAJOR:C-O1
 ./src/sudo.c:5: MAJOR:C-F3
 ./src/sudo.c:5: MINOR:C-G7
-./src/sudo.c~:1: MAJOR:C-O1
-./src/usage.c~:1: MAJOR:C-O1
