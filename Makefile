@@ -25,3 +25,5 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+tests_run: clean
