@@ -17,6 +17,7 @@ jobs:
   check_if_mirror_repo:
     name: Check if correspond to the ssh url
     steps:
+      name: only check
       run: |
         MIRROR=(echo "$MIRROR_SSH_URL" | sed 's|.*\(.*\)\.git|\1|')
         if [ "$MIRROR" = "$GITHUB_REPOSITORY" ]; then
