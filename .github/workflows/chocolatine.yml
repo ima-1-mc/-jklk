@@ -18,14 +18,14 @@ jobs:
     name: Check if correspond to the ssh url
     runs-on: ubuntu-latest
     steps:
-      name: only check
-      run: |
-        MIRROR=$(echo "$MIRROR_SSH_URL" | sed 's|.*\:(.*\)\.git|\1|')
-        if [ "$MIRROR" = "$GITHUB_REPOSITORY" ]; then
-            echo "Running inside the mirror"
-            exit 1
-        fi
-        echo "Proceeding"
+      - name: only check
+        run: |
+          MIRROR=$(echo "$MIRROR_SSH_URL" | sed 's|.*\:(.*\)\.git|\1|')
+          if [ "$MIRROR" = "$GITHUB_REPOSITORY" ]; then
+              echo "Running inside the mirror"
+              exit 1
+          fi
+          echo "Proceeding"
 
   check_compilation_and_coding_style:
     name: Check compilation and coding style
