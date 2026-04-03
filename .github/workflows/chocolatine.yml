@@ -71,6 +71,7 @@ jobs:
             fi
           done
           exit $FAILED
+        shell: bash
 
   run_tests:
     name: Run tests
