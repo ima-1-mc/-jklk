@@ -19,7 +19,7 @@ jobs:
     steps:
       name: only check
       run: |
-        MIRROR=(echo "$MIRROR_SSH_URL" | sed 's|.*\(.*\)\.git|\1|')
+        MIRROR=$(echo "$MIRROR_SSH_URL" | sed 's|.*\(.*\)\.git|\1|')
         if [ "$MIRROR" = "$GITHUB_REPOSITORY" ]; then
             echo "Running inside the mirror"
             exit 1
