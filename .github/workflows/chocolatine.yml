@@ -2,7 +2,8 @@ name: Chocolatine
 
 env:
   MIRROR_SSH_URL: git@github.com:ima-1-mc/-jklk.git
-  EXECUTABLES: mysudo
+  EXECUTABLES: my_sudo
+  CC: epiclang
 
 on:
   push:
