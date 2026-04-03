@@ -16,6 +16,7 @@ on:
 jobs:
   check_if_mirror_repo:
     name: Check if correspond to the ssh url
+    runs-on: ubuntu-latest
     steps:
       name: only check
       run: |
