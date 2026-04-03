@@ -14,8 +14,20 @@ on:
       - "no-ga/**"
 
 jobs:
+  check_if_mirror_repo:
+    name: Check if correspond to the ssh url
+    steps:
+      run: |
+        MIRROR=(echo "$MIRROR_SSH_URL" | sed 's|.*\(.*\)\.git|\1|')
+        if [ "$MIRROR" = "$GITHUB_REPOSITORY" ]; then
+            echo "Running inside the mirror"
+            exit 1
+        fi
+        echo "Proceeding"
+
   check_compilation_and_coding_style:
     name: Check compilation and coding style
+    needs: check_if_mirror_repo
     runs-on: ubuntu-latest
     container: epitechcontent/epitest-docker
     if: ${{ github.repository != vars.MIRROR_REPO }}
